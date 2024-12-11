@@ -149,7 +149,7 @@ screen -dmS corekeeper bash -c "sudo glances"
 ```
 
 ##### 5.2.2 Connecting to the Screen Session
-````bash
+```bash
 screen -r corekeeper
 ```
 
