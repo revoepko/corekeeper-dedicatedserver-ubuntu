@@ -84,6 +84,7 @@ After=network.target
 Type=simple
 User=corekeeper
 WorkingDirectory=/home/corekeeper/server
+ExecStartPre=/bin/sleep 5
 ExecStart=/home/corekeeper/server/_launch.sh
 KillMode=process
 Restart=on-failure
