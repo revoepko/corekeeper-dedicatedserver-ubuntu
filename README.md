@@ -165,3 +165,29 @@ Press Ctrl + A, D
 1. `steamCMD` and the `Core Keeper Dedicated Server` run under the `corekeeper` user account.
 2. The `corekeeper.service` is managed by `systemd`, starting automatically and restarting if the server crashes.
 3. Use `screen` and `glances` for real-time system monitoring.
+
+---
+
+### **7. Trouble Shooting**
+
+#### 7.1 After Server Update
+
+Same as `2.1.1 Core Keeper Dedicated Server Installation`
+
+##### Repeat the executable file modification procedure again.
+
+Modify the script in `/home/corekeeper/server/_launch.sh` as follows:
+
+```
+sed -i 's|Steamworks SDK Redist/linux64|sdk|g' /home/corekeeper/server/_launch.sh
+```
+
+#### 7.2 After SDK Update
+
+Same as `2.1.2 Steamworks SDK Redist Installation`
+
+##### If a Library Error occurs due to the failure to find the 64bit .so file, execute the following command:
+
+```
+ln -s /home/corekeeper/sdk/linux64 ~/.steam/sdk64
+```
